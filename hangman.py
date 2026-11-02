@@ -3,6 +3,7 @@ import random
 playAgain = "yes"
 
 while playAgain.lower() == "yes":
+    print("Lets play Hangman!")
     
     livesLeft = 6
     wordFile = open("words.txt", "r")
@@ -22,7 +23,7 @@ while playAgain.lower() == "yes":
         guess = input(f"Lives left: {livesLeft} \n Guess a letter: ")
         guess = guess.lower()
 
-        while (guess.isnumeric() or len(guess) > 1):
+        while (guess.isnumeric() or len(guess) > 1 or not guess.isalpha()):
             guess = input("Not a valid guess. try again:")
 
         i=0
@@ -40,6 +41,7 @@ while playAgain.lower() == "yes":
         print("You ran out of lives and lost")
 
     playAgain = input("Do you want to play again? (Yes/No) ")
-    
+    while(playAgain.lower != "yes" or playAgain.lower != "no"):
+        playAgain = input("Not a valid response, Yes/No")
 
 
