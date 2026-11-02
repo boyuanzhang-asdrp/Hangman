@@ -42,6 +42,6 @@ while playAgain.lower() == "yes":
 
     playAgain = input("Do you want to play again? (Yes/No) ")
     while(playAgain.lower != "yes" or playAgain.lower != "no"):
-        playAgain = input("Not a valid response, Yes/No")
+        playAgain = input("Not a valid response, Yes/No: ")
 
 
