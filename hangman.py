@@ -39,9 +39,10 @@ while playAgain.lower() == "yes":
         print ("You win!")
     else:
         print("You ran out of lives and lost")
+        print("The word was: " + correctWord.append)
 
     playAgain = input("Do you want to play again? (Yes/No) ")
-    while(playAgain.lower != "yes" and playAgain.lower != "no"):
+    while(playAgain.lower() != "yes" and playAgain.lower() != "no"):
         playAgain = input("Not a valid response, Yes/No: ")
 
-
+print("Thank you for playing!")
