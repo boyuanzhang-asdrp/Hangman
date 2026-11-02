@@ -24,7 +24,7 @@ while playAgain.lower() == "yes":
         guess = guess.lower()
 
         while (guess.isnumeric() or len(guess) > 1 or not guess.isalpha()):
-            guess = input("Not a valid guess. try again:")
+            guess = input("Not a valid guess. try again:").lower()
 
         i=0
         found = False
@@ -39,7 +39,7 @@ while playAgain.lower() == "yes":
         print ("You win!")
     else:
         print("You ran out of lives and lost")
-        print("The word was: " + correctWord.append)
+        print("The word was:", word)
 
     playAgain = input("Do you want to play again? (Yes/No) ")
     while(playAgain.lower() != "yes" and playAgain.lower() != "no"):
